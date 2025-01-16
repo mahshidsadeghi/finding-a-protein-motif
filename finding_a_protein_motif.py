@@ -2,9 +2,6 @@ import re
 import requests
 
 
-INPUT_FILE = "/Users/mahshidsadeghi/Downloads/rosalind_mprt (3).txt"
-
-
 def fetch_protein_sequence(uniprot_id):
     # Extract the base ID (remove any descriptors after an underscore)
     base_id = uniprot_id.split('_')[0]
@@ -46,4 +43,5 @@ def main(input_file):
         print(f"An error occurred: {e}")
 
 if __name__ == "__main__":
-    main(INPUT_FILE)
+    input_file = input("Please enter the address path of the protein string file: ")
+    main(input_file=input_file)
